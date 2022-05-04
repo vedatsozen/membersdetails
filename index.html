@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+<h1>PLEASE CHOOSE MEMBER ID TO SEE DETAILS OF MEMBER</h1>
+<select id="selectid">
+    <option value="1">John</option>
+    <option value="2">Tom</option>
+    <option value="3">Brad</option>
+    <option value="4">Larry</option>
+</select>
+
+<button type="button" id="buttonid" onclick="myfunc()">CLICK</button>
+
+<table>
+    <tr><td>Name</td><td id="name"></td></tr>
+    <tr><td>Age</td><td id="age"></td></tr>
+    <tr><td>City</td><td id="city"></td></tr>
+    
+</table>
+
+</body>
+
+<script>
+
+let members = [
+    
+    
+    {name:"John",age:45,city:"California"},
+    {name:"Tom",age:50,city:"Los Angeles"},
+    {name:"Brad",age:25,city:"New York"},
+    {name:"Larry",age:45,city:"Kansas"}
+
+];
+
+function myfunc() {
+var gelendeger = document.getElementById("selectid").value;
+document.getElementById("name").innerHTML = members[gelendeger-1].name ;
+document.getElementById("age").innerHTML = members[gelendeger-1].age ;
+document.getElementById("city").innerHTML = members[gelendeger-1].city ;
+
+}
+</script>
+</html>
